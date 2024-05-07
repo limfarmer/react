@@ -1,8 +1,13 @@
-import { useLocation } from "react-router-dom";
+import { useLocation, Navigate } from "react-router-dom";
 // 쿼리스트링은 URL 파라미터와 달리 별도 설정이 필요 없음
 
 const About = () => {
   const loc = useLocation();
+  const id = localStorage.getItem("id");
+  if (id !== "dla") {
+    return <Navigate to="/login" replace={true}></Navigate>;
+  }
+  const pwd = localStorage.getItem("pwd");
   return (
     <>
       <h1>여기가 소개 페이지 입니다.</h1>
