@@ -30,8 +30,8 @@ const NewsItemBlock = styled.div`
     margin-top: 3em;
   }
 `;
-const NewsItem = ({ aritcle }) => {
-  const { title, description, url, urlToImage } = aritcle;
+const NewsItem = ({ article }) => {
+  const { title, description, url, urlToImage } = article;
   return (
     <NewsItemBlock>
       {urlToImage && (
